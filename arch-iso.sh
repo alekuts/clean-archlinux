@@ -6,14 +6,14 @@ source variables
 
 
 # Setup disk
-if [ $installType -eq 1 ]; then
+if [ $installType == 1 ]; then
   printf "g\nn\n\n\n$bootPart\nt\n1\nn\n\n\n$rootPart\nn\n\n\n$homePart\nw\nq" | fdisk -W always /dev/$disk
-elif [ $installTypr -eq 2 ]; then
+elif [ $installType == 2 ]; then
   printf "n\n\n\n$rootPart\nn\n\n\n$homePart\nw\nq" | fdisk -W always /dev/$disk
 fi
 part="p"
-partitionCount=$(lsblk -l /dev/disk | grep -c "part")
-if [ $installType -eq 1 ]; then
+partitionCount=$(lsblk -l /dev/$disk | grep -c "part")
+if [ $installType == 1 ]; then
   num=1
   if mkfs.fat -F32 /dev/$disk$part$num; then :
   else
@@ -29,7 +29,7 @@ if [ $installType -eq 1 ]; then
   mkfs.ext4 /dev/$disk$part$num
   mkdir /mnt/home
   mount /dev/$disk$part$num /mnt/home
-elif [ $installType -eq 2 ]; then
+elif [ $installType == 2 ]; then
   num=$((partitionCount-1))
   if mkfs.ext4 /dev/$disk$part$num; then :
   else
