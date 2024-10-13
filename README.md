@@ -6,7 +6,7 @@ This script is designed for an easy and clean installation of Arch Linux, or for
 ## What is required for installation? 🛠️
 
 1. Your motherboard must support UEFI.
-2. The drive must support GPT partition table.
+2. Your drive must support GPT partition table.
 
 ## How to start the installation? 🤔
 
