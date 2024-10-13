@@ -47,18 +47,20 @@ partitions() {
 
 zoneinfo() {
   ls -l  /usr/share/zoneinfo/ | grep '^d' | awk '{print $9}'
-  printf "\nEnter your region\nExample: Europe"
+  printf "\nEnter your region\nExample: Europe\n"
   read region
   if ls /usr/share/zoneinfo/$region; then
-    printf "\nEnter your capital\nExample: Europe\n\n"
+    printf "\nEnter your capital\nExample: Kyiv\n"
     read capital
     if ls /usr/share/$region/$capital &> /dev/null; then
       clear
     else
+      clear
       printf "\033[41mInvalid capital name\033[0m\n\n"
       return 1;
     fi
   else
+    clear
     printf "\033[41mInvalid region name\033[0m\n\n"
     return 1;
   fi
