@@ -19,13 +19,6 @@ disk() {
   fdisk -l
   printf "\nEnter disk\nExamples: sda, nvme0n1\n"
   read disk
-  if lsblk | grep -wq /dev/$disk; then
-    clear
-  else
-    clear
-    printf "\033[41mInvalid disk name\033[0m\n\n"
-    return 1;
-  fi
 }
 
 
@@ -106,7 +99,7 @@ if ping -c 1 google.com &> /dev/null; then
   read -s
   clear
   while ! install-type; do : ; done
-  while ! disk; do : ; done
+  disk
   while ! partitions; do : ; done
   while ! zoneinfo; do : ; done
   host-user-name
