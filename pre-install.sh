@@ -117,7 +117,7 @@ if ping -c 1 google.com &> /dev/null; then
   while ! passwords; do : ; done
   cd
   printf "installType=$installType\ndisk=$disk\nbootPart=$bootPart\nrootPart=$rootPart\nhomePart=$homePart\nregion=$region\ncapital=$capital\nhostname=$hostname\nusername=$username\nrootPasswd=$rootPasswd\nuserPasswd=$userPasswd" > clean-archlinux/variables
-  bash arch-iso.sh
+  bash clean-archlinux/arch-iso.sh
 else
   printf "\033[41mNo internet connection!\033[0m\n"
 fi
