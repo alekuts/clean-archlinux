@@ -30,11 +30,6 @@ partitions() {
     fdisk -l
     printf "\nEnter EFI or boot partition name of another system\nExamples: sda, nvme0n1p1\n"
     read bootPart
-    if lsblk | grep -q /dev/$bootPart; then :
-    else
-      printf "\033[41mInvalid partition name\033[0m\n\n"
-      return 1;
-    fi
   fi
 
   printf "Enter system or root partition size\nExample: +80G\n"
