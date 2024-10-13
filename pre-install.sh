@@ -78,10 +78,12 @@ read -p "Username: " username
 passwords() {
 printf "\nEnter root and username passwords following this rules:\nMinimum length: At least 6 characters.\nVariety of characters: Use a mix of uppercase, lowercase letters, numbers, and special characters.\nYou will not see the password\n"
 read -s -p "Root password: " rootPasswd
-read -s -p "Repeat password: " rootPasswdTest
+printf "\nRepeat password: "
+read -s rootPasswdTest
 if [[ $rootPasswd == $rootPasswdTest ]]; then
   read -s -p "User password: " userPasswd
-  read -s -p "Repeat password: " userPasswdTest
+  printf "\nRepeat password: "
+  read -s userPasswdTest
   if [[ $userPasswd == $userPasswdTest ]]; then
     clear
   else
@@ -95,7 +97,7 @@ fi
 
 clear
 if ping -c 1 google.com &> /dev/null; then
-  printf "\nInstalling Time Zone Database.."
+  printf "Installing Time Zone Database.."
   while ! pacman -Sy --noconfirm tzdata &> /dev/null; do sleep 5; clear; done
   clear
   printf "Welcome to the Clean Archlinux!\nConfigure the installation with clear questions and wait until your device turns off\nPress ENTER to start\n"
