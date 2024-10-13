@@ -70,18 +70,18 @@ zoneinfo() {
 
 host-user-name() {
 printf "Enter hostname or pc name and username following these rules:\n1. No root, bin, daemon, etc. names.\n2. Length 2-32 characters.\n3. Allowed characters: Only lowercase letters (a-z), digits (0-9), hyphen (-), and underscore (_).\n4. No starting with digit.\n"
-read -p "\nHostname: " hostname
-read -p "\nUsername: " username
+read -p "Hostname: " hostname
+read -p "Username: " username
 }
 
 
 passwords() {
 printf "Enter root and username passwords following this rules:\nMinimum length: At least 6 characters.\nVariety of characters: Use a mix of uppercase, lowercase letters, numbers, and special characters.\nYou will not see the password\n"
-read -s -p "\nRoot password: " rootPasswd
-read -s -p "\nRepeat password: " rootPasswdTest
+read -s -p "Root password: " rootPasswd
+read -s -p "Repeat password: " rootPasswdTest
 if [[ $rootPasswd == $rootPasswdTest ]]; then
-  read -s -p "\nUser password: " userPasswd
-  read -s -p "\nRepeat password: " userPasswdTest
+  read -s -p "User password: " userPasswd
+  read -s -p "Repeat password: " userPasswdTest
   if [[ $userPasswd == $userPasswdTest ]]; then
     clear
   else
