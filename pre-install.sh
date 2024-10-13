@@ -46,7 +46,7 @@ partitions() {
 
 
 zoneinfo() {
-  ls -l /usr/share/zoneinfo/
+  ls -l  /usr/share/zoneinfo/ | grep '^d' | awk '{print $9}'
   printf "\nEnter your region\nExample: Europe"
   read region
   if ls /usr/share/zoneinfo/$region; then
