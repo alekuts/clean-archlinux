@@ -52,7 +52,7 @@ zoneinfo() {
   if ls /usr/share/zoneinfo/$region; then
     printf "\n\nEnter your capital\nExample: Kyiv\n"
     read capital
-    if ls /usr/share/$region/$capital &> /dev/null; then
+    if ls /usr/share/zoneinfo/$region/$capital &> /dev/null; then
       clear
     else
       clear
