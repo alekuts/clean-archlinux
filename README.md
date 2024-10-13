@@ -15,7 +15,7 @@ This script is designed for an easy and clean installation of Arch Linux, or for
 3. Insert the flash drive into your computer, go into the motherboard's BIOS/UEFI settings, and set your USB flash drive as the boot device.
 4. Make sure your computer is connected to a wired Ethernet internet connection.
 5. Install git by running the command: ```pacman -Sy git```
-6. Clone the repository with: git clone ```https://github.com/alekuts/clean-archlinux.git```
+6. Clone the repository with: ```git clone https://github.com/alekuts/clean-archlinux.git```
 7. Navigate to the script directory: ```cd clean-archlinux```
 8. To start the installation process, run: ```bash pre-install.sh```
 
