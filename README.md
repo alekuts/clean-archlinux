@@ -19,7 +19,7 @@ This script is designed for an easy and clean installation of Arch Linux, or for
 7. Navigate to the script directory: ```cd clean-archlinux```
 8. To start the installation process, run: ```bash pre-install.sh```
 
-## What to do if you make a mistake? 🚩
+## What should i do if i make a mistake? 🚩
 
 If you make a mistake at any step before installation starts, press ```Ctrl + C``` to stop the script.
 
