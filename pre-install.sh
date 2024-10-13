@@ -88,12 +88,12 @@ if [[ $rootPasswd == $rootPasswdTest ]]; then
     clear
   else
     clear
-    printf "\033[41mPasswords do not match\033[0m\n\n"
+    printf "\033[41mPasswords do not match\033[0m\n"
     return 1;
   fi
 else
   clear
-  printf "\033[41mPasswords do not match\033[0m\n\n"
+  printf "\033[41mPasswords do not match\033[0m\n"
   return 1;
 fi
 }
