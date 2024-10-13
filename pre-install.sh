@@ -76,7 +76,7 @@ read -p "Username: " username
 
 
 passwords() {
-printf "\nEnter root and username passwords following this rules:\nMinimum length: At least 6 characters.\nVariety of characters: Use a mix of uppercase, lowercase letters, numbers, and special characters.\nYou will not see the password\n"
+printf "Enter root and username passwords following this rules:\nMinimum length: At least 6 characters.\nVariety of characters: Use a mix of uppercase, lowercase letters, numbers, and special characters.\nYou will not see the password\n"
 read -s -p "Root password: " rootPasswd
 printf "\nRepeat password: "
 read -s rootPasswdTest
