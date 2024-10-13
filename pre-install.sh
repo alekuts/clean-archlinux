@@ -25,7 +25,6 @@ disk() {
     clear
     printf "\033[41mInvalid disk name\033[0m\n\n"
     return 1;
-      printf "\033[41mInvalid partition name\033[0m\n\n"
   fi
 }
 
