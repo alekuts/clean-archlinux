@@ -1,7 +1,7 @@
 # Clean Arch Linux Install Script 🚀
 
 ## About 📖
-This script is designed for an easy and clean installation of Arch Linux, or for a clean Arch Linux installation alongside another operating system.
+This script is designed for an easy and clean installation of Arch Linux, or clean Arch Linux installation alongside another operating system.
 
 ## What is required for installation? 🛠️
 
