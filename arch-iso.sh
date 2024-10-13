@@ -16,8 +16,10 @@ partitionCount=$(lsblk -l /dev/$disk | grep -c "part")
 if [ $installType == 1 ]; then
   num=1
   if mkfs.fat -F32 /dev/$disk$part$num; then :
+  printf "\npart=$part" >> clean-archlinux/variables
   else
     part=""
+    printf "\npart=$part" >> clean-archlinux/variables
     mkfs.fat -F32 /dev/$disk$part$num
   fi
   num=2
