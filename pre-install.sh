@@ -81,7 +81,8 @@ read -s -p "Root password: " rootPasswd
 printf "\nRepeat password: "
 read -s rootPasswdTest
 if [[ $rootPasswd == $rootPasswdTest ]]; then
-  read -s -p "User password: " userPasswd
+  printf "\nUser password: "
+  read -s userPasswd
   printf "\nRepeat password: "
   read -s userPasswdTest
   if [[ $userPasswd == $userPasswdTest ]]; then
