@@ -49,8 +49,9 @@ zoneinfo() {
   ls -l  /usr/share/zoneinfo/ | grep '^d' | awk '{print $9}'
   printf "\nEnter your region\nExample: Europe\n"
   read region
+  printf "\n"
   if ls /usr/share/zoneinfo/$region; then
-    printf "\n\nEnter your capital\nExample: Kyiv\n"
+    printf "\nEnter your capital\nExample: Kyiv\n"
     read capital
     if ls /usr/share/zoneinfo/$region/$capital &> /dev/null; then
       clear
