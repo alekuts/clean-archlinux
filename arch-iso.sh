@@ -2,7 +2,7 @@
 
 
 # Get variables from variables
-source variables
+source clean-archlinux/variables
 
 
 # Setup disk
