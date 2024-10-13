@@ -100,6 +100,7 @@ if ping -c 1 google.com &> /dev/null; then
   clear
   while ! install-type; do : ; done
   disk
+  clear
   while ! partitions; do : ; done
   while ! zoneinfo; do : ; done
   host-user-name
