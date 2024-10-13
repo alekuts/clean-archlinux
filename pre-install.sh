@@ -50,7 +50,7 @@ zoneinfo() {
   printf "\nEnter your region\nExample: Europe"
   read region
   if ls /usr/share/zoneinfo/$region; then
-    printf "\nEnter your capital\nExample: Europe\n"
+    printf "\nEnter your capital\nExample: Europe\n\n"
     read capital
     if ls /usr/share/$region/$capital &> /dev/null; then
       clear
