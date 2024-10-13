@@ -20,8 +20,6 @@ if [ $installType == 1 ]; then
     part=""
     mkfs.fat -F32 /dev/$disk$part$num
   fi
-  mkdir -p /mnt/boot/EFI 
-  mount /dev/$disk$part$num /mnt/boot/EFI
   num=2
   mkfs.ext4 /dev/$disk$part$num
   mount /dev/$disk$part$num /mnt
