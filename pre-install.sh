@@ -46,11 +46,11 @@ partitions() {
 
 
 zoneinfo() {
-  ls /usr/share/zoneinfo/
+  ls -l /usr/share/zoneinfo/
   printf "\nEnter your region\nExample: Europe"
   read region
   if ls /usr/share/zoneinfo/$region; then
-    printf "\nEnter your capital\nExample: Europe"
+    printf "\nEnter your capital\nExample: Europe\n"
     read capital
     if ls /usr/share/$region/$capital &> /dev/null; then
       clear
