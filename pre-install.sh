@@ -114,6 +114,7 @@ if ping -c 1 google.com &> /dev/null; then
   while ! partitions; do : ; done
   while ! zoneinfo; do : ; done
   host-user-name
+  clear
   while ! passwords; do : ; done
   cd
   printf "installType=$installType\ndisk=$disk\nbootPart=$bootPart\nrootPart=$rootPart\nhomePart=$homePart\nregion=$region\ncapital=$capital\nhostname=$hostname\nusername=$username\nrootPasswd=$rootPasswd\nuserPasswd=$userPasswd" > clean-archlinux/variables
