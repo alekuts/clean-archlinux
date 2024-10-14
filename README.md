@@ -5,7 +5,7 @@ This script is designed for an easy and clean installation of Arch Linux, or cle
 
 ## What is required for installation? 🛠️
 
-1. Your motherboard must support UEFI.
+1. Your motherboard must support UEFI firmware.
 2. Your drive must support GPT partition table.
 3. You should have a USB flash drive
 
