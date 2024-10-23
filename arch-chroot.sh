@@ -40,7 +40,7 @@ sed -Ei 's/# (%wheel ALL.*ALL\) ALL)/\1/' /etc/sudoers
 
 
 # Setup GRUB bootloader
-mkdir /boot/EFI
+mkdir -p /boot/EFI
 if [ $installType == 1 ]; then
   num=1
   mount /dev/$disk$part$num /boot/EFI
