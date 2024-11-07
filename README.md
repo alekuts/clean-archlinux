@@ -11,7 +11,7 @@ This script is designed for an easy and clean installation of Arch Linux, or cle
 
 ## How to start the installation? 🤔
 
-1. Download the .iso file from the [Arch Linux Downloads](https://archlinux.org/download/) page.
+1. Download the .iso file from the [Arch Linux Download](https://archlinux.org/download/) page.
 2. Write the .iso to a USB flash drive using [Rufus](https://rufus.ie/).
 3. Insert the flash drive into your computer, go into the motherboard's BIOS/UEFI settings, and set your USB flash drive as the boot device.
 4. Make sure your computer is connected to a wired Ethernet internet connection.
