@@ -41,15 +41,16 @@ sed -Ei 's/# (%wheel ALL.*ALL\) ALL)/\1/' /etc/sudoers
 
 # Setup GRUB bootloader
 mkdir -p /boot/EFI
-if [ $installType == 1 ]; then
+if [ $installType -eq 1 ]; then
   num=1
   mount /dev/$disk$part$num /boot/EFI
   pacman -Rns --noconfirm os-prober
-elif [ $installType == 2 ]; then
+  grub-install --target=x86_64-efi --efi-directory=/boot/EFI
+elif [ $installType -eq 2 ]; then
   mount /dev/$bootPart /boot/EFI
+  grub-install --target=x86_64-efi --efi-directory=/boot/EFI
   printf "GRUB_DISABLE_OS_PROBER=false\n" >> /etc/default/grub
 fi
-grub-install --target=x86_64-efi --efi-directory=/boot/EFI
 grub-mkconfig -o /boot/grub/grub.cfg
 
 
